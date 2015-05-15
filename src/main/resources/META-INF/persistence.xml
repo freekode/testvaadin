@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name="komruscrm">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>com.hickory.models.Category</class>
+        <class>com.hickory.models.Client</class>
+        <class>com.hickory.models.Item</class>
+        <class>com.hickory.models.Order</class>
+        <class>com.hickory.models.Supplier</class>
+        <class>com.hickory.models.User</class>
+        <class>com.hickory.models.Store</class>
+        <class>com.hickory.models.StoreRow</class>
+        <class>com.hickory.models.StoreRowCell</class>
+        <class>com.hickory.models.Address</class>
+        <class>com.hickory.models.Company</class>
+        <class>com.hickory.models.OrderItem</class>
+        <class>com.hickory.models.CellItem</class>
+        <class>com.hickory.models.Purchase</class>
+        <class>com.hickory.models.Shipment</class>
+
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/komruscrm" />
+            <property name="javax.persistence.jdbc.user" value="komruscrm" />
+            <property name="javax.persistence.jdbc.password" value="10b123bd" />
+
+            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
+            <!--<property name="eclipselink.connection-pool.default.initial" value="10" />-->
+        </properties>
+    </persistence-unit>
+</persistence>

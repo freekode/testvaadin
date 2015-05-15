@@ -1,0 +1,2 @@
+ALTER TABLE orders ADD COLUMN managerId INTEGER;
+ALTER TABLE orders ADD CONSTRAINT orders_fk_manager FOREIGN KEY (managerId) REFERENCES users (id) ON DELETE SET NULL;

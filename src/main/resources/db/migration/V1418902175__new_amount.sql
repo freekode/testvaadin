@@ -1,0 +1,2 @@
+ALTER TABLE cells_items DROP COLUMN amount;
+ALTER TABLE items ADD COLUMN amount INTEGER DEFAULT 0;
